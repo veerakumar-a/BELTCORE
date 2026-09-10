@@ -1,0 +1,9 @@
+{
+  "name": "BELTCORE",
+  "short_name": "BELTCORE",
+  "description": "Event-synchronized multimodal Edge AI platform for conveyor belt joint health intelligence.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F4F6F8",
+  "theme_color": "#123B68"
+}
