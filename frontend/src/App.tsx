@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { NavLink, Route, Routes } from 'react-router-dom'
 import { AlertTriangle, Bell, Cpu, Menu, Search, ShieldCheck, Wrench } from 'lucide-react'
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
@@ -964,9 +964,21 @@ function DocsPage() {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [darkMode, setDarkMode] = useState(false)
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const handlePointerMove = (event: PointerEvent) => {
+      setCursorPos({ x: event.clientX, y: event.clientY })
+    }
+
+    window.addEventListener('pointermove', handlePointerMove)
+    return () => window.removeEventListener('pointermove', handlePointerMove)
+  }, [])
 
   return (
-    <div className="beltcore-app">
+    <div className={`beltcore-app ${darkMode ? 'dark' : ''}`}>
+      <div className="cursor-ring" style={{ transform: `translate(${cursorPos.x}px, ${cursorPos.y}px)` }} />
       <div className="demo-banner">
         <span>DEMO ENVIRONMENT</span>
         <p>Simulation mode is clearly labeled and does not claim field validation.</p>
@@ -998,6 +1010,9 @@ function App() {
           <div className="header-actions">
             <button className="icon-button" aria-label="Search"><Search size={16} /></button>
             <button className="icon-button" aria-label="Notifications"><Bell size={16} /></button>
+            <button className="icon-button theme-toggle" aria-label="Toggle dark mode" onClick={() => setDarkMode((current) => !current)}>
+              {darkMode ? '☀' : '☾'}
+            </button>
             <button className="primary-button small">Dashboard</button>
             <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu"><Menu size={18} /></button>
           </div>

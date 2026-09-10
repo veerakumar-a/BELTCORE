@@ -3,11 +3,48 @@
   color: var(--navy-900);
   min-height: 100vh;
   position: relative;
+  --app-bg: #edf4fb;
+  --app-surface: rgba(255, 255, 255, 0.72);
+  --app-surface-strong: rgba(255, 255, 255, 0.9);
+  --app-text: var(--navy-900);
+  --app-muted: var(--slate-700);
+  --app-grid: rgba(21, 91, 156, 0.045);
+}
+
+.beltcore-app.dark {
+  --app-bg: #071827;
+  --app-surface: rgba(12, 28, 44, 0.7);
+  --app-surface-strong: rgba(11, 24, 39, 0.84);
+  --app-text: #ebf5ff;
+  --app-muted: #a9bdd2;
+  --app-grid: rgba(148, 182, 230, 0.04);
+  color: var(--app-text);
 }
 
 button,
 select {
   font: inherit;
+}
+
+.cursor-ring {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgba(44, 123, 196, 0.65);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background: rgba(44, 123, 196, 0.12);
+  box-shadow: 0 0 18px rgba(44, 123, 196, 0.18);
+}
+
+@media (pointer: coarse) {
+  .cursor-ring {
+    display: none;
+  }
 }
 
 .demo-banner {
@@ -1647,6 +1684,79 @@ select {
   .metric-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.beltcore-app.dark .main-header,
+.beltcore-app.dark .stat-card,
+.beltcore-app.dark .metric-card,
+.beltcore-app.dark .panel-box,
+.beltcore-app.dark .main-panel,
+.beltcore-app.dark .side-panel,
+.beltcore-app.dark .feature-box,
+.beltcore-app.dark .project-card,
+.beltcore-app.dark .info-panel,
+.beltcore-app.dark .chart-box,
+.beltcore-app.dark .sensor-table-wrap,
+.beltcore-app.dark .hypothesis-box,
+.beltcore-app.dark .decision-row,
+.beltcore-app.dark .reliability-item,
+.beltcore-app.dark .fusion-card,
+.beltcore-app.dark .mini-card,
+.beltcore-app.dark .tech-card,
+.beltcore-app.dark .gallery-item,
+.beltcore-app.dark .hardware-item,
+.beltcore-app.dark .roadmap div,
+.beltcore-app.dark .status-grid div,
+.beltcore-app.dark .model-metrics div,
+.beltcore-app.dark .project-card,
+.beltcore-app.dark .passport-showcase,
+.beltcore-app.dark .demo-step,
+.beltcore-app.dark .pipeline-step,
+.beltcore-app.dark .flow-stack-vertical span,
+.beltcore-app.dark .vertical-flow span,
+.beltcore-app.dark .integration-row span,
+.beltcore-app.dark .soft-badge {
+  background: rgba(11, 24, 39, 0.82);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--app-text);
+}
+
+.beltcore-app.dark .brand-name,
+.beltcore-app.dark .section-header h3,
+.beltcore-app.dark .hero-copy h2,
+.beltcore-app.dark .hero-copy p,
+.beltcore-app.dark .stat-card strong,
+.beltcore-app.dark .metric-card strong,
+.beltcore-app.dark .panel-header h4,
+.beltcore-app.dark .project-card h3,
+.beltcore-app.dark .project-card p,
+.beltcore-app.dark .project-card li,
+.beltcore-app.dark .muted,
+.beltcore-app.dark .demo-step strong,
+.beltcore-app.dark .decision-note,
+.beltcore-app.dark .brand-tag {
+  color: var(--app-text);
+}
+
+.beltcore-app.dark .status-pill,
+.beltcore-app.dark .tag,
+.beltcore-app.dark .soft-badge,
+.beltcore-app.dark .icon-button,
+.beltcore-app.dark .menu-button,
+.beltcore-app.dark .secondary-button {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--app-text);
+}
+
+.beltcore-app.dark .hero-visual,
+.beltcore-app.dark .conveyor-illustration {
+  background: linear-gradient(180deg, rgba(9, 29, 48, 0.92), rgba(7, 17, 29, 0.82));
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.beltcore-app.dark .site-footer {
+  background: #061826;
 }
 
 @media (max-width: 640px) {
