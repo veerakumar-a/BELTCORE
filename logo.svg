@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="BELTCORE logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b2442"/>
+      <stop offset="100%" stop-color="#1e5a96"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="18" width="84" height="84" rx="18" fill="url(#g)"/>
+  <path d="M18 39h64v13H18zm0 17h64v13H18zm0 17h64v13H18z" fill="#edf6ff" opacity="0.92"/>
+  <circle cx="50" cy="60" r="12" fill="#7bd7ff"/>
+  <path d="M38 60h24M50 48v24" stroke="#0b2442" stroke-width="3" stroke-linecap="round"/>
+  <text x="116" y="68" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="32" fill="#0b2442">BELTCORE</text>
+  <text x="118" y="92" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#45627d" letter-spacing="2">EVENT-SYNCHRONIZED EDGE AI</text>
+</svg>
