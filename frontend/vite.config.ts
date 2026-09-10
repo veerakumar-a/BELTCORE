@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 VEERAKUMAR A
+
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vitest/config'
 

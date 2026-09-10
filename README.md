@@ -2,6 +2,18 @@
 
 Event-Synchronized Multimodal Edge AI for Joint-Level Conveyor Belt Health Intelligence
 
+Copyright © 2026 VEERAKUMAR A
+Licensed under the MIT License
+
+SPDX-License-Identifier: MIT
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![SIH 2026](https://img.shields.io/badge/SIH-2026-blue.svg)](#)
+[![AI](https://img.shields.io/badge/AI-Enabled-009688.svg)](#)
+[![Edge AI](https://img.shields.io/badge/Edge-AI-673AB7.svg)](#)
+[![IoT](https://img.shields.io/badge/IoT-Enabled-FF9800.svg)](#)
+[![Computer Vision](https://img.shields.io/badge/Computer-Vision-00BCD4.svg)](#)
+
 ## Overview
 BELTCORE is an AI + IoT prototype for conveyor belt joint health monitoring. The project combines a dataset-driven vision pipeline, multimodal event sensing, explainable risk interpretation, and a dashboard that presents the system as a realistic smart-industry monitoring concept for SIH evaluation.
 
@@ -35,6 +47,7 @@ J --> K[Dashboard & Alerts]
 - `frontend/` – Vite + React dashboard and project profile UI
 - `backend/` – FastAPI app and API endpoints
 - `ai/` – dataset, training, validation and inference code
+- `docs/` – licensing and project documentation
 - `SIH/` – extracted dataset assets
 
 ## Current Status
@@ -77,5 +90,49 @@ python train.py
 ## Important Note
 BELTCORE is designed for prototype evaluation and research demonstration. AI recommendations require human maintenance verification and do not replace validated industrial safety controls or engineering diagnosis.
 
+## Branding
+The MIT License applies to the applicable source code of this repository. Project names, logos, trademarks, institutional marks, and third-party assets may be subject to separate rights and permissions.
+
+## Disclaimer
+BELTCORE is a technology prototype developed for Smart India Hackathon 2026.
+
+BELTCORE is not an official website, software product, or system of the Ministry of Steel or NMDC.
+
+The software and AI outputs are intended for research, demonstration, and decision-support purposes.
+
+Safety-critical industrial decisions must be independently validated by qualified personnel and applicable plant safety systems.
+
 ## License
-This project is an SIH 2026 prototype for demonstration and evaluation use.
+BELTCORE source code is released under the MIT License.
+
+Copyright (c) 2026 VEERAKUMAR A
+
+See the [LICENSE](./LICENSE) file for the complete license text.
+
+---
+
+## License
+
+Copyright (c) 2026 VEERAKUMAR A
+
+BELTCORE source code is licensed under the
+[MIT License](./LICENSE).
+
+Third-party software, datasets, models, images,
+logos and other external materials remain subject
+to their respective licenses and rights.
+
+---
+
+## Disclaimer
+
+BELTCORE is a prototype developed for Smart India
+Hackathon 2026.
+
+It is not an official website or software system
+of the Ministry of Steel or NMDC.
+
+AI outputs are intended for research, demonstration
+and decision-support purposes and must not replace
+validated industrial safety systems or qualified
+engineering judgment.
