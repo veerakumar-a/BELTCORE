@@ -47,8 +47,10 @@ J --> K[Dashboard & Alerts]
 - `frontend/` – Vite + React dashboard and project profile UI
 - `backend/` – FastAPI app and API endpoints
 - `ai/` – dataset, training, validation and inference code
+- `datasets/` – dataset assets and validated dataset structure
 - `docs/` – licensing and project documentation
-- `SIH/` – extracted dataset assets
+
+Dataset location: `datasets/`
 
 ## Current Status
 This repository is a working prototype and demo pipeline with clearly labeled development states:

@@ -4,7 +4,7 @@ This folder contains dataset inspection and preparation utilities for the BELTCO
 
 ## Dataset sources
 
-- Source images: `SIH/SIH`
+- Source images: `datasets/`
 - Processed output: `data/processed`
 - Annotations: `data/annotations`
 

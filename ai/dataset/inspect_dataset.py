@@ -8,7 +8,12 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
-DATASET_CANDIDATES = [ROOT / 'SIH' / 'SIH', ROOT / 'data' / 'raw' / 'SIH']
+DATASET_CANDIDATES = [
+    ROOT / 'datasets',
+    ROOT / 'datasets' / 'raw',
+    ROOT / 'SIH' / 'SIH',
+    ROOT / 'data' / 'raw' / 'SIH',
+]
 IMAGE_EXTENSIONS = {'.png', '.jpg', '.jpeg', '.bmp', '.gif', '.tif', '.tiff', '.avif', '.webp'}
 ANNOTATION_EXTENSIONS = {'.xml', '.json', '.txt', '.yaml', '.yml', '.csv'}
 
@@ -17,7 +22,7 @@ def find_dataset_root() -> Path:
     for candidate in DATASET_CANDIDATES:
         if candidate.exists():
             return candidate
-    raise FileNotFoundError('No dataset directory found in SIH/SIH or data/raw/SIH')
+    raise FileNotFoundError('No dataset directory found in datasets, SIH/SIH or data/raw/SIH')
 
 
 def read_image_size(path: Path) -> tuple[int, int]:
