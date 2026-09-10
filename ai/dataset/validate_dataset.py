@@ -4,13 +4,13 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATASET_ROOT = ROOT / 'SIH' / 'SIH'
+DATASET_CANDIDATES = [ROOT / 'datasets', ROOT / 'SIH' / 'SIH']
 
 
 def validate_dataset() -> dict:
-    dataset_root = DATASET_ROOT
-    if not dataset_root.exists():
-        return {'status': 'missing', 'message': 'Dataset not found at SIH/SIH'}
+    dataset_root = next((candidate for candidate in DATASET_CANDIDATES if candidate.exists()), None)
+    if dataset_root is None:
+        return {'status': 'missing', 'message': 'Dataset not found at datasets or SIH/SIH'}
 
     all_files = [p for p in dataset_root.rglob('*') if p.is_file()]
     images = [p for p in all_files if p.suffix.lower() in {'.png', '.jpg', '.jpeg', '.bmp', '.gif', '.tif', '.tiff', '.avif', '.webp'}]
